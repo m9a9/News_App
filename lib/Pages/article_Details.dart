@@ -10,12 +10,12 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ArticlesDetailsPage extends StatelessWidget {
-  ArticleModel? newsdata;
-
   ArticlesDetailsPage({
     this.newsdata,
     BuildContext? context,
   });
+
+  ArticleModel? newsdata;
 
   @override
   Widget build(BuildContext context) {

@@ -70,7 +70,6 @@ class _HomePageState extends State<HomePage> {
       ),
       body: pages[_pageIndex],
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color.fromARGB(255, 10, 94, 163),
           selectedItemColor: Colors.white,
           currentIndex: _pageIndex,
           onTap: (index) {
