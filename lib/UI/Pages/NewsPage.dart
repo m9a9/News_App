@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:news_app/Components/breaking_News.dart';
-import 'package:news_app/Components/exploring%20.dart';
+import 'package:news_app/UI/Components/breaking_News.dart';
+import 'package:news_app/UI/Components/exploring%20.dart';
 
 class NewsPage extends StatelessWidget {
   const NewsPage({super.key});

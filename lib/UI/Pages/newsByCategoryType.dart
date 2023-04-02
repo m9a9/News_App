@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:news_app/Components/custom_Categories_Articles.dart';
-import 'package:news_app/Pages/article_Details.dart';
+import 'package:news_app/UI/Components/custom_Categories_Articles.dart';
+import 'package:news_app/UI/Pages/article_Details.dart';
 import 'package:news_app/Services/news_services.dart';
 import 'package:news_app/models/article_Model.dart';
 
@@ -39,7 +39,9 @@ class NewsByCategoryType extends StatelessWidget {
                                           context: context,
                                         )));
                           },
-                          child: customListTile(newsData[index]));
+                          child: customListTile(
+                            newsData[index],
+                          ));
                     }),
               );
             }

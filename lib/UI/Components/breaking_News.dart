@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:news_app/Pages/article_Details.dart';
-import 'package:news_app/Pages/savedArticles.dart';
+import 'package:news_app/UI/Pages/article_Details.dart';
+import 'package:news_app/UI/Pages/savedArticles.dart';
 import 'package:news_app/Services/news_services.dart';
 import 'package:news_app/models/article_Model.dart';
 import 'package:news_app/provider/saved_articlesProvider.dart';
@@ -17,8 +17,6 @@ class BreakingNews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SavedArticlesProvider savesProvider =
-        Provider.of<SavedArticlesProvider>(context, listen: false);
     return FutureBuilder(
       future: client.getAllnews(),
       builder: (context, AsyncSnapshot snapshot) {
@@ -113,7 +111,11 @@ class BreakingNews extends StatelessWidget {
                                 color: Color.fromARGB(95, 20, 0, 29)),
                             child: IconButton(
                                 onPressed: () {
-                                  savesProvider.addArticles(newsList[index]);
+                                  final savedItem =
+                                      Provider.of<ArticlesListViewModel>(
+                                          context,
+                                          listen: false);
+                                  savedItem.addArticlestoFav(newsList[index]);
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text('Article saved'),

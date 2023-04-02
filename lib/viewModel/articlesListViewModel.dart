@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Components/custom_Categories_Articles.dart';
+import 'package:news_app/UI/Components/custom_Categories_Articles.dart';
 import 'package:news_app/Services/news_services.dart';
 import 'package:news_app/models/article_Model.dart';
 import 'package:news_app/viewModel/article.dart';
@@ -24,6 +24,18 @@ class ArticlesListViewModel with ChangeNotifier {
 
   void openUrl(Uri url) async {
     await launchUrl(url);
+    notifyListeners();
+  }
+
+  List<ArticleModel> _favList = [];
+  List<ArticleModel> get favList => _favList;
+  void addArticlestoFav(ArticleModel article) {
+    favList.add(article);
+    notifyListeners();
+  }
+
+  void removeArticleFromFav(ArticleModel article) {
+    favList.remove(article);
     notifyListeners();
   }
 }

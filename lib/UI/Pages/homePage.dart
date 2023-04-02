@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:news_app/Components/breaking_News.dart';
-import 'package:news_app/Pages/NewsPage.dart';
-import 'package:news_app/Pages/categoriesPage.dart';
-import 'package:news_app/Pages/savedArticles.dart';
+import 'package:news_app/UI/Components/breaking_News.dart';
+import 'package:news_app/UI/Pages/NewsPage.dart';
+import 'package:news_app/UI/Pages/categoriesPage.dart';
+import 'package:news_app/UI/Pages/savedArticles.dart';
 
 import '../Components/exploring .dart';
 

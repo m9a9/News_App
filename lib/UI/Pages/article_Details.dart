@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:news_app/Pages/homePage.dart';
+import 'package:news_app/UI/Pages/homePage.dart';
 import 'package:news_app/models/article_Model.dart';
 import 'package:news_app/viewModel/articlesListViewModel.dart';
 import 'package:provider/provider.dart';

@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:news_app/Components/customCategory_field.dart';
-import 'package:news_app/Pages/newsByCategoryType.dart';
-import 'package:news_app/Pages/savedArticles.dart';
+import 'package:news_app/UI/Components/customCategory_field.dart';
+import 'package:news_app/UI/Pages/newsByCategoryType.dart';
+import 'package:news_app/UI/Pages/savedArticles.dart';
 import 'package:news_app/main.dart';
 
 class CategoriesPage extends StatelessWidget {
