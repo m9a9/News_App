@@ -34,37 +34,6 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
               onPressed: () {}, icon: Icon(Icons.search, color: Colors.black)),
-          PopupMenuButton(
-              offset: Offset(0, 100),
-              color: Color.fromARGB(255, 106, 185, 224),
-              elevation: 0,
-              itemBuilder: (context) => [
-                    PopupMenuItem(
-                        value: 1,
-                        child: Column(
-                          children: [
-                            ListTile(
-                              leading: Icon(Icons.dark_mode),
-                              title: Text('DarkMode'),
-                            ),
-                            ListTile(
-                              leading: Icon(Icons.light_mode),
-                              title: Text('LightMode'),
-                            ),
-                          ],
-                        )),
-                    PopupMenuItem(
-                      value: 2,
-                      child: ListTile(
-                        leading: Icon(Icons.details),
-                        title: Text('About Me'),
-                      ),
-                    )
-                  ]),
-
-          // IconButton(
-          //     onPressed: () {},
-          //     icon: Icon(Icons.more_horiz, color: Colors.black))
         ],
         elevation: 0,
       ),

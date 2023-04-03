@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/UI/Components/custom_Categories_Articles.dart';
+import 'package:news_app/UI/Pages/article_Details.dart';
 
 import 'package:news_app/models/article_Model.dart';
-import 'package:news_app/provider/saved_articlesProvider.dart';
 import 'package:news_app/viewModel/articlesListViewModel.dart';
 
 import 'package:provider/provider.dart';
@@ -16,7 +16,7 @@ class SavedArticles extends StatelessWidget {
     final favItemProvider =
         Provider.of<ArticlesListViewModel>(context, listen: false);
     final favItems = favItemProvider.favList;
-    int index = favItems.length;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Saved'),
@@ -27,26 +27,20 @@ class SavedArticles extends StatelessWidget {
         child: ListView.builder(
             itemCount: favItems.length,
             itemBuilder: (context, index) {
-              return customListTile(
-                favItems[index],
+              return InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ArticlesDetailsPage(
+                                newsdata: favItems[index],
+                              )));
+                },
+                child: CustomListTile(
+                  article: favItems[index],
+                ),
               );
             }),
-      ),
-      floatingActionButton: Container(
-        height: 50,
-        width: 50,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.deepOrange,
-        ),
-        child: IconButton(
-            onPressed: () {
-              favItemProvider.removeArticleFromFav(favItems[index]);
-            },
-            icon: Icon(
-              Icons.remove_circle_outline,
-              color: Colors.white,
-            )),
       ),
     );
   }

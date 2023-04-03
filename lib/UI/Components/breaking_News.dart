@@ -7,7 +7,6 @@ import 'package:news_app/UI/Pages/article_Details.dart';
 import 'package:news_app/UI/Pages/savedArticles.dart';
 import 'package:news_app/Services/news_services.dart';
 import 'package:news_app/models/article_Model.dart';
-import 'package:news_app/provider/saved_articlesProvider.dart';
 import 'package:news_app/viewModel/articlesListViewModel.dart';
 import 'package:provider/provider.dart';
 
@@ -119,6 +118,7 @@ class BreakingNews extends StatelessWidget {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text('Article saved'),
+                                      duration: Duration(seconds: 2),
                                     ),
                                   );
                                 },

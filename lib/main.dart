@@ -5,7 +5,6 @@ import 'package:news_app/UI/Pages/article_Details.dart';
 import 'package:news_app/UI/Pages/categoriesPage.dart';
 
 import 'package:news_app/UI/Pages/homePage.dart';
-import 'package:news_app/provider/saved_articlesProvider.dart';
 import 'package:news_app/viewModel/articlesListViewModel.dart';
 import 'package:provider/provider.dart';
 

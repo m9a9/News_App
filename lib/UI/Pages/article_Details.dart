@@ -28,7 +28,10 @@ class ArticlesDetailsPage extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Color.fromARGB(255, 2, 22, 77), shape: BoxShape.circle),
             child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Provider.of<ArticlesListViewModel>(context, listen: false)
+                      .addArticlestoFav(newsdata!);
+                },
                 icon: Icon(
                   Icons.favorite_border,
                   color: Colors.white,

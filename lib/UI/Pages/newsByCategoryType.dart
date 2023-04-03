@@ -39,8 +39,8 @@ class NewsByCategoryType extends StatelessWidget {
                                           context: context,
                                         )));
                           },
-                          child: customListTile(
-                            newsData[index],
+                          child: CustomListTile(
+                            article: newsData[index],
                           ));
                     }),
               );
